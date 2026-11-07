@@ -1,0 +1,13 @@
+.env
+.env.*
+!.env.example
+.venv/
+__pycache__/
+*.pyc
+data/
+*.log
+*.token
+.mcp_*
+*.pem
+*.key
+*.p12

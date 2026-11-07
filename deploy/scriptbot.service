@@ -1,0 +1,16 @@
+[Unit]
+Description=ScriptBot Discord bridge for Roblox MCP
+After=network-online.target mcp-bridge.service
+Wants=network-online.target mcp-bridge.service
+
+[Service]
+Type=simple
+User=ubuntu
+WorkingDirectory=/home/ubuntu/scriptbot
+EnvironmentFile=/home/ubuntu/scriptbot/.env
+ExecStart=/home/ubuntu/run_bot.sh
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target
